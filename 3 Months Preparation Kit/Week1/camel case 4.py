@@ -3,8 +3,7 @@
 while True:
     try:
         # get text line
-        text_line = input()
-        if text_line == '' or text_line == '\n': break
+        text_line = input().rstrip()
 
         # split text
         line_list = text_line.split(';')
@@ -16,9 +15,11 @@ while True:
 
             if line_list[1] == 'M': # method
                 name = line_list[2][1:-2]
-            else: name = line_list[2]
+                print("name as M:", name)
+            else: name = line_list[2][1:]
             # for M, C, V
-            for n in name[1:]:
+            for n in name:
+                print("n:", n)
                 if n.isupper(): result += ' '
                 result += n  
             
@@ -26,7 +27,12 @@ while True:
             
         else:
             words_list = line_list[2].split(' ')
+            
+            print("Hi ", words_list) # test
+            
             words_camelcase = list(map(str.title, words_list))
+            
+            print("Hi ", words_camelcase) # test
             
             if line_list[1] != 'C': # method or var
                 words_camelcase[0] = words_camelcase[0].lower()
