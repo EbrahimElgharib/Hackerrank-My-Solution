@@ -3,6 +3,6 @@ A Folder contain My different Solutions of Hackerrank Problem, which will be ren
 
 
 
-## Starts
+## 3 Months Preparation Kit
 
-5 July, 2023
+Starts at 5 July, 2023
