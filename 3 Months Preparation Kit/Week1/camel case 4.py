@@ -16,7 +16,7 @@ while True:
             if line_list[1] == 'M': # method
                 name = line_list[2][1:-2]
                 print("name as M:", name)
-            else: name = line_list[2][1:]
+            else: name = line_list[2]
             # for M, C, V
             for n in name:
                 print("n:", n)
